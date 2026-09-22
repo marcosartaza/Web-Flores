@@ -1,20 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/main.css"><link rel="stylesheet" href="css/garden.css">
     <link rel="icon" href="img/flowers.png" type="image/x-icon">
-    <title>FLORES</title>
+    <title>Flores para ustedes</title>
 </head>
 
-<body class="container">
-    <audio src="./DATOS/img/Floricienta.mp3" controls autoplay loop></audio>
-    Tu navegador no soporta el elemento de audio.
+<body class="container garden">
+    <audio src="./img/Floricienta.mp3" autoplay loop preload="metadata" hidden>
+      Tu navegador no soporta el elemento de audio.
     </audio>
     <div class="night"></div>
-    <div class="flowers">
+    <div class="sky" aria-hidden="true"></div>
+    <div class="moon" aria-hidden="true"></div>
+    <a class="back-link" href="../Index.html">← Volver a la dedicatoria</a>
+    <header class="garden-heading">
+      <p class="garden-kicker">UN POQUITO DE PRIMAVERA</p>
+      <h1>Flores para <em>ustedes.</em></h1>
+      <p>Que nunca les falten motivos para florecer.</p>
+    </header>
+    <div class="fireflies" aria-hidden="true"></div>
+    <p class="sound-note" hidden>Tocá la pantalla o presioná Enter para escuchar la música.</p>
+    <div class="flowers" role="img" aria-label="Un ramo de flores amarillas animadas bajo la luz de la luna">
       <div class="flower flower--1">
         <div class="flower__leafs flower__leafs--1">
           <div class="flower__leaf flower__leaf--1"></div>

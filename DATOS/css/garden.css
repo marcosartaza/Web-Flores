@@ -1,0 +1,47 @@
+:root{color-scheme:dark;--cream:#fff4d4;--gold:#e9c66d;--muted:#b3bdaf;--ink:#071713}
+html{min-height:100%;background:var(--ink)}
+body{margin:0;color:var(--cream);font-family:Georgia,'Times New Roman',serif}
+.welcome{min-height:100svh;display:grid;place-items:center;overflow-x:hidden;background:radial-gradient(ellipse at 50% 100%,#29422c 0,transparent 60%),#071713}
+.sky{position:fixed;inset:0;pointer-events:none;background-image:radial-gradient(circle,#e8cb8266 1px,transparent 1.8px),radial-gradient(circle,#fff2c433 1px,transparent 2px);background-size:117px 143px,193px 211px;background-position:31px 47px,71px 19px;mask-image:linear-gradient(#000,transparent);opacity:.55}
+.orbit{position:fixed;width:min(76vw,850px);aspect-ratio:1;border:1px solid #d8be7620;border-radius:50%;pointer-events:none;box-shadow:0 0 0 65px #d8be7605,0 0 0 130px #d8be7604}
+.invitation{position:relative;text-align:center;padding:70px 24px 90px;max-width:760px;animation:arrive 1.2s ease both}
+.eyebrow,.footnote,footer,.garden-kicker,.back-link,.sound-note{font-family:Arial,sans-serif;font-weight:400}
+.eyebrow{font-size:10px;letter-spacing:3px;color:var(--gold);line-height:1.8}
+.botanical{font-size:52px;color:var(--gold);margin:27px 0 10px;text-shadow:0 0 45px #eac46944}
+h1{font-weight:400;font-size:clamp(65px,10vw,124px);line-height:.94;letter-spacing:-5px;margin:15px 0 28px}
+h1 em{font-weight:400;color:var(--gold)}
+.message{font-size:clamp(17px,2.4vw,22px);line-height:1.6;color:#e2e5d6}
+.rule{display:block;width:45px;height:1px;background:#d6b46a66;margin:25px auto}
+.intro{font-style:italic;font-size:18px;color:var(--muted)}
+.open-garden{display:inline-flex;gap:35px;align-items:center;margin-top:20px;padding:19px 29px;border-radius:40px;background:linear-gradient(115deg,#f5deb0,#e9bd62);color:#233022;font:14px Arial,sans-serif;text-decoration:none;box-shadow:0 8px 40px #e6bc5917;transition:transform .25s,box-shadow .25s}
+.open-garden:hover{transform:translateY(-3px);box-shadow:0 10px 45px #e6bc5938}
+a:focus-visible{outline:2px solid var(--cream);outline-offset:7px}
+.footnote{font-size:11px;color:var(--muted);margin-top:21px}
+footer{position:absolute;bottom:22px;font-size:9px;letter-spacing:2px;color:#9cae96;display:flex;gap:18px}
+body.garden{background:#071713;min-height:100svh;isolation:isolate}
+.garden .night{filter:none;background:radial-gradient(ellipse at 50% 90%,#38533877,transparent 55%),radial-gradient(ellipse at 75% 15%,#99845716,transparent 35%),linear-gradient(#071713,#10271e);z-index:-3}
+.garden .sky{z-index:-2}
+.moon{position:fixed;right:12%;top:13%;width:62px;height:62px;border-radius:50%;background:#f5e4b4;box-shadow:0 0 65px #ead3a52a,inset -12px -5px 0 #d7c68e;opacity:.7;z-index:-1}
+.garden-heading{position:absolute;top:8%;left:20px;right:20px;text-align:center;z-index:20;pointer-events:none;animation:arrive 1.4s ease both}
+.garden-kicker{font-size:10px;letter-spacing:3px;color:var(--gold);margin:0 0 16px}
+.garden-heading h1{font-size:clamp(36px,5.3vw,70px);letter-spacing:-2px;margin:0;line-height:1.05}
+.garden-heading p:last-child{font-size:16px;color:#b9c8b5;font-style:italic;margin-top:15px}
+.back-link{position:fixed;top:25px;left:28px;z-index:40;font-size:12px;text-decoration:none;color:#d6dfcf}
+.garden .flowers{position:absolute;left:50%;bottom:-3vmin;transform:scale(.82);filter:drop-shadow(0 0 12px #dabc4720)}
+.garden .flower__leaf{background-image:linear-gradient(to top,#d59129 0%,#efc64c 35%,#ffdf79 75%,#fff0b6);box-shadow:inset 0 0 1.5vmin #fff3bc66;opacity:.96}
+.garden .flower__leafs::after{background:#efc768;opacity:.35}
+.garden .flower__white-circle{background:#e9c565;box-shadow:0 0 1.5vmin #f7da6644}
+.garden .flower__line{background-image:linear-gradient(to left,#0003,transparent,#fff2),linear-gradient(to top,transparent 10%,#315736,#76a257)}
+.garden .flower__line__leaf{background-image:linear-gradient(to top,#284c34,#8eaf61)}
+.garden .flower--4{transform:rotate(28deg);left:9vmin;bottom:5vmin}
+.garden .flower--4 .flower__line{height:43vmin}
+.garden .flower__leafs--4{animation-delay:2s}
+.fireflies{position:fixed;inset:0;pointer-events:none;z-index:15;overflow:hidden}
+.fireflies i{position:absolute;left:var(--x);top:var(--y);width:3px;height:3px;border-radius:50%;background:#f5da8b;box-shadow:0 0 12px 3px #e7c66344;animation:float-light var(--time) ease-in-out infinite alternate;animation-delay:var(--delay)}
+.sound-note{position:fixed;bottom:20px;left:20px;right:20px;text-align:center;z-index:30;font-size:11px;letter-spacing:1px;color:#dce5c8;transition:opacity .5s;pointer-events:none}
+.sound-note[hidden]{display:none}
+@keyframes arrive{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+@keyframes float-light{0%{opacity:.1;transform:translate(0,15px)}50%{opacity:.8}100%{opacity:.2;transform:translate(25px,-35px)}}
+@media(max-width:600px){.invitation{padding:50px 22px 90px}h1{letter-spacing:-3px}.eyebrow{font-size:9px;letter-spacing:2px}.moon{right:8%;top:27%;width:35px;height:35px}.garden-heading{top:14%}.garden-heading h1{font-size:42px}.garden-heading p:last-child{font-size:14px}.garden .flowers{transform:scale(1.12);bottom:10svh}.back-link{top:22px;left:20px}.garden-kicker{font-size:9px;letter-spacing:2px}}
+@media(max-height:550px) and (min-width:601px){.garden-heading{top:7%}.garden-heading h1{font-size:35px}.garden-heading p:last-child{display:none}.garden .flowers{transform:scale(.68)}footer{position:static;padding-bottom:20px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.container *{animation-play-state:running!important}}
